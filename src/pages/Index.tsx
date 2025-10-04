@@ -12,23 +12,24 @@ interface DonateItem {
   name: string;
   price: number;
   image: string;
+  description: string;
   features: string[];
 }
 
 const DONATE_ITEMS: DonateItem[] = [
-  { id: 1, name: 'Барон', price: 10, image: '/img/67c5133c-b633-474c-b7b1-9fa03f2e3069.jpg', features: ['Базовые команды', 'Цветной ник', '2 дома'] },
-  { id: 2, name: 'Страж', price: 16, image: '/img/fd26bc25-073b-4cc9-b7f9-db6bfc16dc8d.jpg', features: ['Все из Барон', 'Дополнительные команды', '3 дома'] },
-  { id: 3, name: 'Герой', price: 24, image: '/img/67c5133c-b633-474c-b7b1-9fa03f2e3069.jpg', features: ['Все из Страж', '/hat команда', '5 домов'] },
-  { id: 4, name: 'Аспид', price: 56, image: '/img/fd26bc25-073b-4cc9-b7f9-db6bfc16dc8d.jpg', features: ['Все из Герой', '/fly полёт', '10 домов'] },
-  { id: 5, name: 'Сквид', price: 69, image: '/img/67c5133c-b633-474c-b7b1-9fa03f2e3069.jpg', features: ['Все из Аспид', 'Эффекты', '15 домов'] },
-  { id: 6, name: 'Глава', price: 87, image: '/img/fd26bc25-073b-4cc9-b7f9-db6bfc16dc8d.jpg', features: ['Все из Сквид', 'Приватные варпы', '20 домов'] },
-  { id: 7, name: 'Элита', price: 149, image: '/img/67c5133c-b633-474c-b7b1-9fa03f2e3069.jpg', features: ['Все из Глава', 'Уникальный префикс', '30 домов'] },
-  { id: 8, name: 'Титан', price: 239, image: '/img/fd26bc25-073b-4cc9-b7f9-db6bfc16dc8d.jpg', features: ['Все из Элита', 'Креатив', '50 домов'] },
-  { id: 9, name: 'Принц', price: 329, image: '/img/67c5133c-b633-474c-b7b1-9fa03f2e3069.jpg', features: ['Все из Титан', 'Эксклюзивные команды', '75 домов'] },
-  { id: 10, name: 'Князь', price: 549, image: '/img/fd26bc25-073b-4cc9-b7f9-db6bfc16dc8d.jpg', features: ['Все из Принц', 'Безлимит варпов', '100 домов'] },
-  { id: 11, name: 'Герцог', price: 999, image: '/img/67c5133c-b633-474c-b7b1-9fa03f2e3069.jpg', features: ['Все из Князь', 'Админ команды', 'Безлимит домов'] },
-  { id: 12, name: 'Спонсор', price: 1850, image: '/img/fd26bc25-073b-4cc9-b7f9-db6bfc16dc8d.jpg', features: ['Все из Герцог', 'Особый статус', 'Все возможности'] },
-  { id: 13, name: 'Мажор', price: 2650, image: '/img/67c5133c-b633-474c-b7b1-9fa03f2e3069.jpg', features: ['ТОП привилегия', 'Максимальные права', 'VIP поддержка'] }
+  { id: 1, name: 'Барон', price: 10, image: '/img/67c5133c-b633-474c-b7b1-9fa03f2e3069.jpg', description: 'Описание будет добавлено позже', features: ['Базовые команды', 'Цветной ник', '2 дома'] },
+  { id: 2, name: 'Страж', price: 16, image: '/img/fd26bc25-073b-4cc9-b7f9-db6bfc16dc8d.jpg', description: 'Описание будет добавлено позже', features: ['Все из Барон', 'Дополнительные команды', '3 дома'] },
+  { id: 3, name: 'Герой', price: 24, image: '/img/67c5133c-b633-474c-b7b1-9fa03f2e3069.jpg', description: 'Описание будет добавлено позже', features: ['Все из Страж', '/hat команда', '5 домов'] },
+  { id: 4, name: 'Аспид', price: 56, image: '/img/fd26bc25-073b-4cc9-b7f9-db6bfc16dc8d.jpg', description: 'Описание будет добавлено позже', features: ['Все из Герой', '/fly полёт', '10 домов'] },
+  { id: 5, name: 'Сквид', price: 69, image: '/img/67c5133c-b633-474c-b7b1-9fa03f2e3069.jpg', description: 'Описание будет добавлено позже', features: ['Все из Аспид', 'Эффекты', '15 домов'] },
+  { id: 6, name: 'Глава', price: 87, image: '/img/fd26bc25-073b-4cc9-b7f9-db6bfc16dc8d.jpg', description: 'Описание будет добавлено позже', features: ['Все из Сквид', 'Приватные варпы', '20 домов'] },
+  { id: 7, name: 'Элита', price: 149, image: '/img/67c5133c-b633-474c-b7b1-9fa03f2e3069.jpg', description: 'Описание будет добавлено позже', features: ['Все из Глава', 'Уникальный префикс', '30 домов'] },
+  { id: 8, name: 'Титан', price: 239, image: '/img/fd26bc25-073b-4cc9-b7f9-db6bfc16dc8d.jpg', description: 'Описание будет добавлено позже', features: ['Все из Элита', 'Креатив', '50 домов'] },
+  { id: 9, name: 'Принц', price: 329, image: '/img/67c5133c-b633-474c-b7b1-9fa03f2e3069.jpg', description: 'Описание будет добавлено позже', features: ['Все из Титан', 'Эксклюзивные команды', '75 домов'] },
+  { id: 10, name: 'Князь', price: 549, image: '/img/fd26bc25-073b-4cc9-b7f9-db6bfc16dc8d.jpg', description: 'Описание будет добавлено позже', features: ['Все из Принц', 'Безлимит варпов', '100 домов'] },
+  { id: 11, name: 'Герцог', price: 999, image: '/img/67c5133c-b633-474c-b7b1-9fa03f2e3069.jpg', description: 'Описание будет добавлено позже', features: ['Все из Князь', 'Админ команды', 'Безлимит домов'] },
+  { id: 12, name: 'Спонсор', price: 1850, image: '/img/fd26bc25-073b-4cc9-b7f9-db6bfc16dc8d.jpg', description: 'Описание будет добавлено позже', features: ['Все из Герцог', 'Особый статус', 'Все возможности'] },
+  { id: 13, name: 'Мажор', price: 2650, image: '/img/67c5133c-b633-474c-b7b1-9fa03f2e3069.jpg', description: 'Описание будет добавлено позже', features: ['ТОП привилегия', 'Максимальные права', 'VIP поддержка'] }
 ];
 
 const REVIEWS = [
@@ -203,8 +204,9 @@ export default function Index() {
                   <h4 className="text-xl font-bold text-center mb-2 bg-gradient-to-r from-purple-400 to-orange-400 bg-clip-text text-transparent">
                     {item.name}
                   </h4>
+                  <p className="text-gray-400 text-xs text-center mb-3">{item.description}</p>
                   
-                  <ul className="space-y-1 mb-4 min-h-[80px]">
+                  <ul className="space-y-1 mb-4 min-h-[60px]">
                     {item.features.slice(0, 3).map((feature, index) => (
                       <li key={index} className="flex items-start gap-1 text-xs text-gray-300">
                         <Icon name="Check" size={14} className="text-green-500 mt-0.5 flex-shrink-0" />
