@@ -6,6 +6,9 @@ import Icon from '@/components/ui/icon';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useToast } from '@/hooks/use-toast';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
 
 interface DonateItem {
   id: number;
@@ -53,13 +56,33 @@ const REVIEWS = [
 export default function Index() {
   const { toast } = useToast();
   const [onlinePlayers] = useState(47);
+  const [purchaseDialog, setPurchaseDialog] = useState(false);
+  const [selectedItem, setSelectedItem] = useState<{ name: string; price: number } | null>(null);
+  const [nickname, setNickname] = useState('');
 
   const handlePurchase = (item: { name: string; price: number }) => {
+    setSelectedItem(item);
+    setPurchaseDialog(true);
+  };
+
+  const handleConfirmPurchase = () => {
+    if (!nickname.trim()) {
+      toast({
+        title: "Ошибка",
+        description: "Пожалуйста, введите ваш игровой ник",
+        variant: "destructive"
+      });
+      return;
+    }
+    
     window.open('https://funpay.com/users/16724676/', '_blank');
     toast({
       title: "Переход к оплате",
-      description: `${item.name} - ${item.price} ₽`,
+      description: `${selectedItem?.name} - ${selectedItem?.price} ₽ для ${nickname}`,
     });
+    
+    setPurchaseDialog(false);
+    setNickname('');
   };
 
   return (
@@ -453,6 +476,73 @@ export default function Index() {
           </div>
         </div>
       </footer>
+
+      <Dialog open={purchaseDialog} onOpenChange={setPurchaseDialog}>
+        <DialogContent className="bg-[#1a1a2e] border-purple-500/20">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-orange-400 bg-clip-text text-transparent">
+              Покупка привилегии
+            </DialogTitle>
+            <DialogDescription className="text-gray-400">
+              Введите ваш игровой ник для оформления покупки
+            </DialogDescription>
+          </DialogHeader>
+          
+          <div className="space-y-4 py-4">
+            <div className="space-y-2">
+              <Label htmlFor="nickname" className="text-white">
+                Игровой ник
+              </Label>
+              <Input
+                id="nickname"
+                placeholder="Ваш ник в Minecraft"
+                value={nickname}
+                onChange={(e) => setNickname(e.target.value)}
+                className="bg-[#0a0a0f] border-purple-500/20 text-white placeholder:text-gray-500"
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    handleConfirmPurchase();
+                  }
+                }}
+              />
+            </div>
+            
+            {selectedItem && (
+              <div className="bg-[#0a0a0f] p-4 rounded-lg border border-purple-500/20">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-sm text-gray-400">Привилегия</p>
+                    <p className="text-lg font-bold text-white">{selectedItem.name}</p>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-sm text-gray-400">Цена</p>
+                    <p className="text-2xl font-bold text-orange-400">{selectedItem.price} ₽</p>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+          
+          <div className="flex gap-3">
+            <Button
+              variant="outline"
+              onClick={() => {
+                setPurchaseDialog(false);
+                setNickname('');
+              }}
+              className="flex-1 border-purple-500/20 text-white hover:bg-purple-600/20"
+            >
+              Отмена
+            </Button>
+            <Button
+              onClick={handleConfirmPurchase}
+              className="flex-1 bg-gradient-to-r from-purple-600 to-orange-600 hover:from-purple-700 hover:to-orange-700 text-white"
+            >
+              Перейти к оплате
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
