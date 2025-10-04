@@ -37,7 +37,17 @@ const REVIEWS = [
   { author: 'umQKoKiq', role: 'Создатель', text: 'Играйте, веселитесь и наслаждайтесь анархией!', rating: 5 },
   { author: 'TukeInside', role: 'Создатель', text: 'Стабильный сервер с крутым комьюнити!', rating: 5 },
   { author: '_no_ezz_xaxa_', role: 'Админ', text: 'Всегда помогу новичкам, заходите!', rating: 5 },
-  { author: 'kristallik_mal', role: 'Бета тестер', text: 'Тестировал с самого начала - проект огонь!', rating: 5 }
+  { author: 'kristallik_mal', role: 'Бета тестер', text: 'Тестировал с самого начала - проект огонь!', rating: 5 },
+  { author: 'DarkKnight228', role: 'Князь', text: 'Купил Князь - лучшее вложение! /fly просто топ, полёт в анархии это нечто!', rating: 5 },
+  { author: 'MineBuilder_Pro', role: 'Герой', text: 'Взял Герой, /hat команда вообще крутая! Теперь хожу с алмазным блоком на голове)', rating: 5 },
+  { author: 'CraftMaster99', role: 'Титан', text: 'Титан стоит своих денег, /jump экономит кучу времени при строительстве!', rating: 5 },
+  { author: 'xXShadowXx', role: 'Аспид', text: 'Аспид огонь! /heal и /feed помогают выживать в анархии. Советую всем!', rating: 5 },
+  { author: 'EpicGamer777', role: 'Элита', text: 'Купил Элита ради /weather и /time. Теперь строю всегда при дневном свете!', rating: 5 },
+  { author: 'NoobDestroyer', role: 'Сквид', text: 'Сквид топ за свою цену! /ec очень удобно, а /back спас уже раз 20', rating: 5 },
+  { author: 'RedstoneKing', role: 'Спонсор', text: 'Спонсор - это мечта! 20 регионов, куча домов, все команды. Лучшая привилегия!', rating: 5 },
+  { author: 'SteveTheBest', role: 'Страж', text: 'Начал со Стража - отличный старт! Донат-чат и базовые команды за 16 рублей', rating: 4 },
+  { author: 'EnderPearl_', role: 'Герцог', text: 'Герцог просто имба! Вход на полный сервер и нет задержки тп - это сила!', rating: 5 },
+  { author: 'DiamondHunter', role: 'Принц', text: 'Принц крутая привилегия, портативные столы очень экономят время в шахтах!', rating: 5 }
 ];
 
 export default function Index() {
