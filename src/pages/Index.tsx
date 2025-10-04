@@ -18,7 +18,7 @@ interface DonateItem {
 
 const DONATE_ITEMS: DonateItem[] = [
   { id: 1, name: 'Барон', price: 10, image: '/img/67c5133c-b633-474c-b7b1-9fa03f2e3069.jpg', description: 'Префикс [Барон], /kit Барон, /salary, /crawl • 2 дома, 2 региона (Гриф), 6 слотов аукциона', features: ['Базовые команды', 'Цветной ник', '2 дома'] },
-  { id: 2, name: 'Страж', price: 16, image: '/img/fd26bc25-073b-4cc9-b7f9-db6bfc16dc8d.jpg', description: 'Описание будет добавлено позже', features: ['Все из Барон', 'Дополнительные команды', '3 дома'] },
+  { id: 2, name: 'Страж', price: 16, image: '/img/fd26bc25-073b-4cc9-b7f9-db6bfc16dc8d.jpg', description: 'Префикс [Страж], /kit Страж, /suicide, /dchat • 2 дома, 2 региона (Гриф 45k), 7 слотов аукциона', features: ['Все из Барон', 'Дополнительные команды', '3 дома'] },
   { id: 3, name: 'Герой', price: 24, image: '/img/67c5133c-b633-474c-b7b1-9fa03f2e3069.jpg', description: 'Описание будет добавлено позже', features: ['Все из Страж', '/hat команда', '5 домов'] },
   { id: 4, name: 'Аспид', price: 56, image: '/img/fd26bc25-073b-4cc9-b7f9-db6bfc16dc8d.jpg', description: 'Описание будет добавлено позже', features: ['Все из Герой', '/fly полёт', '10 домов'] },
   { id: 5, name: 'Сквид', price: 69, image: '/img/67c5133c-b633-474c-b7b1-9fa03f2e3069.jpg', description: 'Описание будет добавлено позже', features: ['Все из Аспид', 'Эффекты', '15 домов'] },
